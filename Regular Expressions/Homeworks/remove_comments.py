@@ -1,8 +1,7 @@
 import re
-import io
 import shutil
 import os
-import sys
+
 
 def remove_comments(file1, file2):
     """
@@ -18,7 +17,7 @@ def remove_comments(file1, file2):
         pt = re.compile("#.*")
         file1 = os.path.dirname(os.path.realpath(__file__))+"\\"+file1
         with open(file1, "r+") as fp:
-            with open(file2,"w") as fp_2:
+            with open(file2, "w") as fp_2:
                 while True:
                     line = fp.readline()
                     if line == '':
@@ -29,7 +28,7 @@ def remove_comments(file1, file2):
         os.remove(file2)
 
 
-def main():
+def main(): 
     remove_comments("example.txt","temp.txt")
 
 
