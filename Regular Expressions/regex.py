@@ -171,4 +171,17 @@ pt.findall("This is the story of Harry Potter and the Prisoner of Azkaban")
 
 pt = re.compile("(.)([A-Z][a-z]+)")
 str1 = pt.sub(r"\1_\2", "HarryPotterAndThePrisonerOfAzkaban")
-print(re.sub("([a-z0-9])([A-Z])", r"\1_\2", str1))
+re.sub("([a-z0-9])([A-Z])", r"\1_\2", str1)
+
+# Write a python program to convert snake case string to camel case string.
+word = "harry_Potter_And_The_Prisoner_of_azkaban"
+''.join(x.capitalize() for x in word.split("_"))
+
+# Write a Python program to extract values between quotation marks of a string.
+pt = re.compile("\"(.*?)\"")
+print(pt.findall('"Python" "PHP"'))
+
+# Write a Python program to remove multiple spaces in a string.
+pt = re.compile("\s{2,}")
+print(pt.sub(" ", "This   is  the game"))
+
